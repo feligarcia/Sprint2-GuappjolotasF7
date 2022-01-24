@@ -1,3 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+Api heroku: https://guajolota.herokuapp.com/
+
+Tamale: Api + /tamales,
+Guajolota: Api + /guajolota,
+bebisad: Api + / bebidas,
+sabores: Api + /sabores,
+saboresbebidad: + /saboresbebidad
