@@ -5,3 +5,8 @@ Guajolota: Api + /guajolota,
 bebisad: Api + / bebidas,
 sabores: Api + /sabores,
 saboresbebidad: + /saboresbebidad
+--------------------------------------------------------------------------------------
+intalado:
+routers
+style component
+--------------------------------------------------------------------------------------
