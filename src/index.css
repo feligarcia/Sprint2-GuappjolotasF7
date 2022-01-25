@@ -1,3 +1,11 @@
+
+:root{
+  --Background-total: #f2f2f2;
+  --Background-cajas: #FFF;
+  --letter-color: #000;
+  --Primary-color: #fa4a0c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.cabecera{
+  background-color: var(--Background-total);
+  height: auto;
+  padding: 2%;
+}
+.cont-image{
+  width: 20%;
+}
+.image{
+  width: 100%;
+}
+.bi-cart2{
+  font-size: 2rem;
+}
+.Pproduct:active{
+  color: var(--Primary-color);
 }
