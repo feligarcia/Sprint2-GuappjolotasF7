@@ -5,11 +5,7 @@ import AppRouter from './routes/AppRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
-    
-=======
       <AppRouter />
->>>>>>> dev
   </React.StrictMode>,
   document.getElementById('root')
 );
