@@ -13,26 +13,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.cabecera{
-  background-color: var(--Background-total);
-  height: auto;
-  padding: 2%;
-}
-.cont-image{
-  width: 20%;
-}
-.image{
-  width: 100%;
-}
-.bi-cart2{
-  font-size: 2rem;
-}
-.Pproduct:active{
-  color: var(--Primary-color);
+
+*{
+  background-color: #F2F2F2;
 }

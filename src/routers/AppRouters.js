@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route, Navigate, HashRouter} from 'react-router-dom'
+import { Routes, Route, Navigate, HashRouter} from 'react-router-dom'
 
 
 export default class AppRouter extends Component {

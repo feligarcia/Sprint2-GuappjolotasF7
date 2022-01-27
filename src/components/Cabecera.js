@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Logo from "../../assets/images/logo.png";
-import { Flexrow, Pprodut, Search, SearchInput } from '../../styles/Styles';
+import Logo from "../assets/images/logo.png";
+import { Flexrow, Pprodut, Search, SearchInput } from '../styleds/Styles';
 
 export default class Cabecera extends Component {
   render() {
