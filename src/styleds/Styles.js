@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 export const Flexrow = styled.div`
     display: flex;
-    justify-content: space-between;
     padding: 3% 5% 2% 0;
 `
 

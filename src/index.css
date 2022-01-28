@@ -25,3 +25,58 @@ code {
 *{
   background-color: #F2F2F2;
 }
+.cabecera{
+  background-color: var(--Background-total);
+  height: auto;
+  padding: 2%;
+}
+.cont-image{
+  width: 20%;
+}
+.image{
+  width: 100%;
+}
+.bi-cart2{
+  font-size: 2rem;
+}
+.Pproduct:active{
+  color: var(--Primary-color);
+}
+.bi-search{
+  background-color: transparent;
+  font-weight: 700;
+}
+.iconosCabecera{
+    justify-content: space-between;
+}
+.itemListado{
+  justify-content: space-evenly;
+  background-color: var(--Background-cajas);
+  border-radius: 20px;
+}
+.ListaProductos{
+  background-color: var(--Background-total);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 3%;
+}
+.descProducto{
+  background-color: var(--Background-cajas);
+}
+.contenedorImagen{
+  background-color: transparent;
+}
+.nombre{
+  text-align: center;
+}
+.precio{
+  color: var(--Primary-color);
+}
+.bebida{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
