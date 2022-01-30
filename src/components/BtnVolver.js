@@ -2,6 +2,7 @@ import { render } from "@testing-library/react"
 import React from "react"
 import styled from "styled-components"
 import imgvolver from '../assets/images/volver.png';
+import { useNavigate } from "react-router-dom";
 
 
 export const StyledVolver = styled.div`
@@ -16,9 +17,10 @@ top: 44px;
  
  
  function BtnVolver() {
+   const navigate = useNavigate()
    return (
-   <StyledVolver>
-       <img src={imgvolver}></img>
+   <StyledVolver >
+       <img src={imgvolver} onClick={()=>navigate("/menu")}></img>
    </StyledVolver>
    );
  }

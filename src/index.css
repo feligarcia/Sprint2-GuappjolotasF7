@@ -55,6 +55,8 @@ code {
   background-color: var(--Background-cajas);
   border-radius: 20px;
 }
+.itemListado:hover{
+border-style:inset;}
 .ListaProductos{
   background-color: var(--Background-total);
   display: flex;

@@ -5,6 +5,7 @@ import Carrito from '../containers/Carrito'
 import Inicio from '../containers/Inicio'
 import Login from '../containers/Login'
 import Cabecera from '../components/Cabecera'
+import ModalCarrito from '../containers/Modal'
 
 
 export default class AppRouter extends Component {
@@ -17,7 +18,9 @@ export default class AppRouter extends Component {
                        <Route exact path="/menu" element={<Cabecera/>}/>
                        <Route exact path="/principal" element={<Principal />} />
                        <Route exact path="*" element={<Navigate replace to="/" />}/>
-                       <Route exact path="/Login" element={<Login />}/>
+                       <Route exact path="/login" element={<Login />}/>
+                       <Route exact path="/carrito" element={<Carrito />}/>
+                       <Route exact path="/modal" element={<ModalCarrito />}/>
                    </Routes>
                 </BrowserRouter>
           

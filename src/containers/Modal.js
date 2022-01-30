@@ -5,6 +5,7 @@ import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'
 import { BtnComprar } from "../styleds/BtnComprar";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 
 export const DivCol = styled.div`
@@ -26,7 +27,7 @@ export const H3Modal = styled.h3`
         `
 
 const ModalCarrito = () => {
-    
+    const navigate =useNavigate()
 
 
     return(
@@ -37,8 +38,8 @@ const ModalCarrito = () => {
             <h3>Guajolota de Tamal Verde</h3>
             <H3Modal>$50 MXN</H3Modal>
             <Contador />
-            <h3><BtnComprar>Actualizar</BtnComprar></h3>
-                <H3Modal>Cerrar</H3Modal>
+            <h3><BtnComprar onClick={()=>navigate("/carrito")}>Actualizar</BtnComprar></h3>
+                <H3Modal onClick={()=>navigate("/carrito")}>Cerrar</H3Modal>
            </DivCol>
 
 
