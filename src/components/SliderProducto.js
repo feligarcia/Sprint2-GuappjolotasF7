@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'
 import { BtnComprar } from "../styleds/BtnComprar";
 import styled from "styled-components";
+import { FormProductos } from "./FuncionFormP";
 
 
 export const DivCol = styled.div`
@@ -32,6 +33,7 @@ const SliderProducto = ({producto}) => {
     const {imagen, nombre, precio} = producto
 
 
+    console.log(FormProductos);
     return(
         <>
         
