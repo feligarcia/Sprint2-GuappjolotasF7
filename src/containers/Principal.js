@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
-import Cabecera from '../comoponent/menu/Cabecera';
+import React from 'react';
+import SliderProducto from '../components/SliderProducto';
+import BtnVolver from '../components/BtnVolver'
+import BtnCarrito from '../components/BtnCarrito';
 
-export default class Principal extends Component {
-  render() {
-    return <div>
-        <Cabecera />
-    </div>;
-  }
+
+function Principal() {
+  return (<>
+<BtnVolver />
+<BtnCarrito />
+<SliderProducto />
+
+
+
+  </>);
 }
+
+export default Principal;

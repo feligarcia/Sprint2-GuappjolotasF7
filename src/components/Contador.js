@@ -46,7 +46,7 @@ const Contador = () => {
   const [counter, setCounter] = useState(1);
 
   const handledSubstract = () => {
-    if(counter > 0){
+    if(counter > 1){
       setCounter(counter - 1)}
     }
 
