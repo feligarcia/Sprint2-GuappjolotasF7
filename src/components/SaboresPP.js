@@ -29,8 +29,8 @@ const SaboresPP = ({producto}) =>{
   const {sabor} = producto
 
   const changeSabor = () =>{
+    producto.producto()
     
-    setProducto()
   }
   return (
   <div>

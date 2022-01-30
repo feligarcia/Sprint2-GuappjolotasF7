@@ -28,6 +28,7 @@ const Principal = () => {
 }
 useEffect(() => {
   getData()
+  
 }, []);
 
 
@@ -37,8 +38,8 @@ useEffect(() => {
         <SliderProducto producto={producto}/>
         <br></br>
         <br></br>
-        <SaboresPP producto={producto}/>
-        <Combo />
+        <SaboresPP producto={setProducto}/>
+        <Combo categoria={categoria}/>
         <BtnComprar> Agregar 1 al carrito $25.00</BtnComprar>
 
 
