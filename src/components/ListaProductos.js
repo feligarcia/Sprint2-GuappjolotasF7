@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { endpoint } from '../helpers/Url';
 import { Flexrow } from '../styleds/Styles';
+import { FormProductos } from './FuncionFormP';
 
 
 export const Guajolotas = ()=>{
@@ -25,7 +26,8 @@ export const Guajolotas = ()=>{
         <div className='ListaProductos'>
             {
                 guajolota.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} > 
+                   
+                    <Flexrow onClick={()=>FormProductos(ele.id, "guajalota")}  className='itemListado' id={ele.id} defaultValue={'guajolota'} key={ele.id} > 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>
@@ -65,7 +67,7 @@ export const Bebidas = ()=>{
         <div className='ListaProductos'>
             {
                 bebida.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} > 
+                    <Flexrow className='itemListado' key={ele.id} onClick={()=>FormProductos(ele.id, "bebidas")}> 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>
@@ -104,7 +106,7 @@ export const Tamales = ()=>{
         <div className='ListaProductos'>
             {
                 tamal.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} > 
+                    <Flexrow className='itemListado' key={ele.id} onClick={()=>FormProductos(ele.id, "tamales")} > 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>

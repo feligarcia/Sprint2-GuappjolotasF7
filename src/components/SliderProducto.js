@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'
 import { BtnComprar } from "../styleds/BtnComprar";
 import styled from "styled-components";
+import { FormProductos } from "./FuncionFormP";
 
 
 export const DivCol = styled.div`
@@ -27,10 +28,11 @@ export const H3Modal = styled.h3`
    margin: 10px;
         `
 
+
+
 const SliderProducto = () => {
-    
 
-
+    console.log(FormProductos);
     return(
         <>
         

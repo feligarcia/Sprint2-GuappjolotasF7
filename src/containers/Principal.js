@@ -5,6 +5,7 @@ import BtnCarrito from '../components/BtnCarrito';
 import SaboresPP from '../components/SaboresPP';
 import Combo from '../components/Combo';
 import { BtnComprar } from '../styleds/BtnComprar';
+import { FormProductos } from '../components/FuncionFormP';
 
 
 function Principal() {
