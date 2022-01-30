@@ -5,6 +5,7 @@ import ModalCarrito from "./Modal";
 import { Bebidas, Guajolotas, Tamales } from "../components/ListaProductos";
 import SliderProducto from "../components/SliderProducto";
 import Principal from "./Principal";
+import Inicio from "./Inicio";
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <ModalCarrito /> */}
       {/* <SliderProducto /> */}
       
-      <Principal />
+      {/* <Principal /> */}
+      <Inicio />
       
     </div>
   );

@@ -9,14 +9,14 @@ import { BtnComprar } from '../styleds/BtnComprar';
 
 function Principal() {
   return (<>
-<BtnVolver />
-<BtnCarrito />
-<SliderProducto />
-<br></br>
-<br></br>
-<SaboresPP />
-<Combo />
-<BtnComprar> Agregar 1 al carrito $25.00</BtnComprar>
+        <BtnVolver />
+        <BtnCarrito />
+        <SliderProducto />
+        <br></br>
+        <br></br>
+        <SaboresPP />
+        <Combo />
+        <BtnComprar> Agregar 1 al carrito $25.00</BtnComprar>
 
 
 
