@@ -81,3 +81,22 @@ code {
   align-items: center;
   justify-items: center;
 }
+
+.active{
+  color: var(--Primary-color);
+  padding-bottom: 1%;
+  font-weight: 600;
+  border-bottom: 3px solid var(--Primary-color);
+}
+.active1{
+  color: var(--Primary-color);
+  padding-bottom: 1%;
+  font-weight: 600;
+  border-bottom: 3px solid var(--Primary-color);
+}
+.active2{
+  color: var(--Primary-color);
+  padding-bottom: 1%;
+  font-weight: 600;
+  border-bottom: 3px solid var(--Primary-color);
+}

@@ -33,7 +33,9 @@ export default class Cabecera extends Component {
       mostrarTamal:true
     })
   }
+    
   render() {
+    const {mostrarBebidas, mostrarGuajolota, mostrarTamal} =this.state
     return (<div className='cabecera'>
         <Flexrow className='iconosCabecera'>
 
@@ -51,9 +53,9 @@ export default class Cabecera extends Component {
              placeholder='Sabor de guajolota, bebida...' />
         </Search>
         <Flexrow className='iconosCabecera'>
-            <Pprodut className='Pproduct' onClick={this.guajolotas}>Guajolotas</Pprodut>
-            <Pprodut className='Pproduct' onClick={this.bebidas}>Bebidas</Pprodut>
-            <Pprodut className='Pproduct'onClick={this.tamales}>Tamales</Pprodut>
+            <Pprodut className={'Pproduct'} onClick={this.guajolotas}>Guajolotas</Pprodut>
+            <Pprodut className={'Pproduct'} onClick={this.bebidas}>Bebidas</Pprodut>
+            <Pprodut onClick={this.tamales}className={'Pproduct'+ ( mostrarTamal  && "active2")}>Tamales</Pprodut>
         </Flexrow>
         {this.state.mostrarGuajolota && <Guajolotas />}
         {this.state.mostrarBebidas && <Bebidas />}
