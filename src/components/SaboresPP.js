@@ -8,18 +8,13 @@ import pasas from '../assets/sabores/pasas.png'
 import guayaba from '../assets/sabores/guayaba.png'
 
 export const DivSabores = styled.div`
-    display: flex;
-    flex-direction:column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 160px;
     padding: 0 24px;
-    justify-content: space-between;
     margin: 24px 0;
 `
-export const DivRow = styled.div`
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    margin: 24px 0;
-`
+
 export const ImgSabor = styled.img`
     width:64px;
     height:69px;
@@ -30,23 +25,29 @@ export const ImgSabor = styled.img`
 `
 
 
-function SaboresPP() {
-  return (<div>
+const SaboresPP = ({producto}) =>{
+  const {sabor} = producto
+
+  const changeSabor = () =>{
+    
+    setProducto()
+  }
+  return (
+  <div>
       <h2>Sabor</h2>
       <DivSabores>
-        <DivRow>
-            <ImgSabor src={verde}></ImgSabor>
-            <ImgSabor src={mole}></ImgSabor>
-            <ImgSabor src={rajas}></ImgSabor>
-        </DivRow>
-        <DivRow>
-            <ImgSabor src={pina}></ImgSabor>
-            <ImgSabor src={pasas}></ImgSabor>
-            <ImgSabor src={guayaba}></ImgSabor>
-        </DivRow>
+        
+            <ImgSabor name="verde" src={verde} onClick={changeSabor}></ImgSabor>
+            <ImgSabor name="mole" src={mole}></ImgSabor>
+            <ImgSabor name="rajas" src={rajas}></ImgSabor>       
+            <ImgSabor name="pina" src={pina}></ImgSabor>
+            <ImgSabor name="pasas" src={pasas}></ImgSabor>
+            <ImgSabor name="guayaba" src={guayaba}></ImgSabor>
+        
 
       </DivSabores>
-  </div>);
+  </div>
+  );
 }
 
 export default SaboresPP;
