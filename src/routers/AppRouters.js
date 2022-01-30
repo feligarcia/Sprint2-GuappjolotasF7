@@ -16,11 +16,12 @@ export default class AppRouter extends Component {
                     <Routes>
                        <Route exact path="/" element={<Inicio/>}/>
                        <Route exact path="/menu" element={<Cabecera/>}/>
-                       <Route exact path="/principal" element={<Principal />} />
+                       <Route exact path="/principal/:categoria/:id" element={<Principal />} />
                        <Route exact path="*" element={<Navigate replace to="/" />}/>
                        <Route exact path="/login" element={<Login />}/>
-                       <Route exact path="/carrito" element={<Carrito />}/>
+                       {/* <Route exact path="/carrito" element={<Carrito />}/> */}
                        <Route exact path="/modal" element={<ModalCarrito />}/>
+                       <Route exact path="/menu/" element={<Cabecera/>}/>
                    </Routes>
                 </BrowserRouter>
           

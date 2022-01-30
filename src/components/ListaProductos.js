@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createContext  } from 'react';
 import axios from 'axios';
 import { endpoint } from '../helpers/Url';
 import { Flexrow } from '../styleds/Styles';
-import { FormProductos } from './FuncionSearch';
+import Principal from '../containers/Principal';
+import { useNavigate } from 'react-router-dom';
+
 
 const SetLocal = (e)=>{
         const id = e.target.id
         console.log(id);
     }
 export const Guajolotas = ()=>{
+    const navigate = useNavigate()
+   
     const [guajolota, setGuajolota] = useState([]);
 
     useEffect(()=>{
@@ -30,8 +34,7 @@ export const Guajolotas = ()=>{
         <div className='ListaProductos'>
             {
                 guajolota.map(ele =>(
-                   
-                    <Flexrow onClick={FormProductos}  className='itemListado' id={ele.id} defaultValue={'guajolota'} key={ele.id} > 
+                    <Flexrow className='itemListado' key={ele.id} onClick={() => navigate(`/principal/guajolota/${ele.id}`)}> 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>
@@ -51,6 +54,7 @@ export const Guajolotas = ()=>{
 }
 
 export const Bebidas = ()=>{
+    const navigate = useNavigate()
     const [bebida, setBebida] = useState([]);
 
     useEffect(()=>{
@@ -71,7 +75,7 @@ export const Bebidas = ()=>{
         <div className='ListaProductos'>
             {
                 bebida.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} onClick={FormProductos}> 
+                    <Flexrow className='itemListado' key={ele.id} onClick={() => navigate(`/principal/bebidas/${ele.id}`)}> 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>
@@ -90,6 +94,7 @@ export const Bebidas = ()=>{
     )
 }
 export const Tamales = ()=>{
+    const navigate = useNavigate()
     const [tamal, setTamal] = useState([]);
 
     useEffect(()=>{
@@ -110,7 +115,7 @@ export const Tamales = ()=>{
         <div className='ListaProductos'>
             {
                 tamal.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} onClick={FormProductos} > 
+                    <Flexrow className='itemListado' key={ele.id} onClick={() => navigate(`/principal/tamales/${ele.id}`)}> 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>

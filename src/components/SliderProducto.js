@@ -28,18 +28,19 @@ export const H3Modal = styled.h3`
    margin: 10px;
         `
 
+const SliderProducto = ({producto}) => {
+    
+    const {imagen, nombre, precio} = producto
 
-
-const SliderProducto = () => {
 
     console.log(FormProductos);
     return(
         <>
         
            <DivCol>
-            <ImgModal src={imagenprueba}></ImgModal>
-            <h3>Guajolota de Tamal Verde</h3>
-            <H3Modal>$50 MXN</H3Modal>
+            <ImgModal src={imagen}></ImgModal>
+            <h3>{nombre}</h3>
+            <H3Modal>${precio} MXN</H3Modal>
             <Contador />
             
                
