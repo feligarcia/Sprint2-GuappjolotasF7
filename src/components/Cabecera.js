@@ -44,7 +44,7 @@ export default class Cabecera extends Component {
 
             <i className="bi bi-cart2"></i>
         </Flexrow>
-        <p>Nada como una guajolotas para empezar el día</p>
+        <h1>Nada como una guajolotas para empezar el día</h1>
         <Search>
             <i className="bi bi-search"></i>
             <SearchInput type="text" name='producto'

@@ -24,6 +24,7 @@ code {
 
 *{
   background-color: #F2F2F2;
+  max-width: 420px;
 }
 .cabecera{
   background-color: var(--Background-total);

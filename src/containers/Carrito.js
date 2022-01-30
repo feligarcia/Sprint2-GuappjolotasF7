@@ -28,8 +28,8 @@ const Carrito =() => {
       <BtnVolver />
       <StyledH2Carrito>Carrito</StyledH2Carrito>
     
-    {/* <CartEmpty /> */}
-    <ListCarrito />
+    <CartEmpty />
+    {/* <ListCarrito /> */}
     <BtnComprar>
         <h2>Pagar</h2>
     </BtnComprar>

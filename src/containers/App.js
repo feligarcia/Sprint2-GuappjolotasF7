@@ -10,6 +10,7 @@ function App() {
     <div className='App'>
       <Cabecera/>
       {/* <Carrito /> */}
+      {/* <ModalCarrito /> */}
       
     </div>
   );
