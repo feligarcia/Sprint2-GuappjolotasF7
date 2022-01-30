@@ -6,6 +6,7 @@ import { Bebidas, Guajolotas, Tamales } from "../components/ListaProductos";
 import SliderProducto from "../components/SliderProducto";
 import Principal from "./Principal";
 import Inicio from "./Inicio";
+import AppRouter from "../routers/AppRouters";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       {/* <SliderProducto /> */}
       
       {/* <Principal /> */}
-      <Inicio />
+      <AppRouter />
       
     </div>
   );
