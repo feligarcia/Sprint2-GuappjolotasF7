@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { endpoint } from '../helpers/Url';
 import { Flexrow } from '../styleds/Styles';
-import { FormProductos } from './FuncionFormP';
+import { FormProductos } from './FuncionSearch';
 
-
+const SetLocal = (e)=>{
+        const id = e.target.id
+        console.log(id);
+    }
 export const Guajolotas = ()=>{
     const [guajolota, setGuajolota] = useState([]);
 
@@ -21,13 +24,14 @@ export const Guajolotas = ()=>{
                 console.log(error);
             })
     }
+    
     console.log(guajolota);
     return(
         <div className='ListaProductos'>
             {
                 guajolota.map(ele =>(
                    
-                    <Flexrow onClick={()=>FormProductos(ele.id, "guajalota")}  className='itemListado' id={ele.id} defaultValue={'guajolota'} key={ele.id} > 
+                    <Flexrow onClick={FormProductos}  className='itemListado' id={ele.id} defaultValue={'guajolota'} key={ele.id} > 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>
@@ -67,7 +71,7 @@ export const Bebidas = ()=>{
         <div className='ListaProductos'>
             {
                 bebida.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} onClick={()=>FormProductos(ele.id, "bebidas")}> 
+                    <Flexrow className='itemListado' key={ele.id} onClick={FormProductos}> 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>
@@ -106,7 +110,7 @@ export const Tamales = ()=>{
         <div className='ListaProductos'>
             {
                 tamal.map(ele =>(
-                    <Flexrow className='itemListado' key={ele.id} onClick={()=>FormProductos(ele.id, "tamales")} > 
+                    <Flexrow className='itemListado' key={ele.id} onClick={FormProductos} > 
                         <div className='contenedorImagen'>
                             <img src={ele.imagen} alt={ele.nombre} />
                         </div>

@@ -49,7 +49,7 @@ export default class Cabecera extends Component {
         <h1>Nada como una guajolotas para empezar el día</h1>
         <Search>
             <i className="bi bi-search"></i>
-            <SearchInput type="text" name='producto'
+            <SearchInput className='input' type="text" name='producto'
              placeholder='Sabor de guajolota, bebida...' />
         </Search>
         <Flexrow className='iconosCabecera'>

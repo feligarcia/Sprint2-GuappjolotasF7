@@ -102,3 +102,8 @@ border-style:inset;}
   font-weight: 600;
   border-bottom: 3px solid var(--Primary-color);
 }
+
+.input:focus{
+  border:none;
+  outline: none;
+}
