@@ -6,6 +6,10 @@ import rajas from '../assets/sabores/rajas.png'
 import pina from '../assets/sabores/pina.png'
 import pasas from '../assets/sabores/pasas.png'
 import guayaba from '../assets/sabores/guayaba.png'
+import arroz from '../assets/sabores/arroz_con_leche.png'
+import cafe from '../assets/sabores/cafe.png'
+import champurrado from '../assets/sabores/champurrado.png'
+import chocolate from '../assets/sabores/chocolate.png'
 
 export const DivSabores = styled.div`
     display: grid;
@@ -25,19 +29,48 @@ export const ImgSabor = styled.img`
 `
 
 
-const SaboresPP = ({producto}) =>{
+const SaboresPP = (props) =>{
+  const producto = props.producto
   const {sabor} = producto
-
+  const categoria = props.categoria
   const changeSabor = () =>{
     producto.producto()
     
   }
+//   let saborestodo = {}
+//   if(categoria==='bebidas'){
+//      saborestodo = {
+//       "arroz":{arroz},
+//       "cafe":{cafe},
+//       "champurrado":{champurrado},
+//       "chocolate":{chocolate},
+//     }
+// } else{
+//    saborestodo = {
+//     "verde":{verde},
+//     "mole":{mole},
+//     "rajas":{rajas},
+//     "pina":{pina},
+//     "pasas":{pasas},
+//     "guayaba":{guayaba},
+//    }
+// }
+// console.log(saborestodo.keys)
+
+
   return (
   <div>
       <h2>Sabor</h2>
       <DivSabores>
-        
-            <ImgSabor name="verde" src={verde} onClick={changeSabor}></ImgSabor>
+        {/* { saborestodo.map(ele=>(
+          <ImgSabor name={ele[0]} src={ele[0][0]} onClick={changeSabor}></ImgSabor>
+
+        ))
+          
+
+
+        } */}
+            
             <ImgSabor name="mole" src={mole}></ImgSabor>
             <ImgSabor name="rajas" src={rajas}></ImgSabor>       
             <ImgSabor name="pina" src={pina}></ImgSabor>

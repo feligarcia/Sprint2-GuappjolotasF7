@@ -37,15 +37,16 @@ useEffect(() => {
 console.log(contador)
 let suma = contador * precie
 const agregarLocal = () =>{
-  const compra = {
-    nombre: `${producto.nombre}`,
-    precio: `${producto.precio}`,
-    cantidad: `${contador}`,
-  }
+  console.log('no problem')
+  // const compra = {
+  //   nombre: `${producto.nombre}`,
+  //   precio: `${producto.precio}`,
+  //   cantidad: `${contador}`,
+  // }
   
- const getlocalstorage = JSON.parse(localStorage.getItem('Carrito'))
+//  const getlocalstorage = JSON.parse(localStorage.getItem('Carrito'))
 //  const anadido = getlocalstorage.unshift(compra)
- console.log(typeof(getlocalstorage))
+//  console.log(typeof(getlocalstorage))
 // const postLocal = JSON.stringify(localStorage.setItem('Carrito',compra))
 }
 
@@ -56,7 +57,7 @@ const agregarLocal = () =>{
         <SliderProducto producto={producto} numero={contador => setContador(contador)} precie={setPrecie}/>
         <br></br>
         <br></br>
-        <SaboresPP producto={setProducto}/>
+        <SaboresPP producto={setProducto} categoria={categoria}/>
         <Combo categoria={categoria}/>
         <BtnComprar onClick={()=> {agregarLocal() ; navigate("/carrito")}}> Agregar {contador} al carrito ${suma}</BtnComprar>
 
