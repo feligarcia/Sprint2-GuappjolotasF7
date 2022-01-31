@@ -12,7 +12,7 @@ export const DivCombo = styled.div`
  `
 
 
-export const DivPro = styled.div`
+export const FormPro = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 160px;
@@ -67,6 +67,7 @@ const TitleLet = ({ descripcion }) => <H2Titulo>{descripcion}</H2Titulo>
 
 const Combo =({categoria}) => {
     const [combo, setCombo] = useState([]);
+    const [carrito, setCarrito] = useState([]);
     let captiondescrip =''
     let titulo = ''
     let cate = ''
@@ -97,15 +98,24 @@ const Combo =({categoria}) => {
         getData()
        }, []);
 
+       const handleChanged = ({target}) => {
+        if(target.checked ===true)
+        setCarrito({
+            ...carrito,
+                [target.id]: target.name}
+            )
+        console.log(carrito)
+      }
+
   return (
   <DivCombo>
         <TitleLet descripcion={titulo}></TitleLet>
         <Descrip descripcion={captiondescrip} />
-        <DivPro>
+        <FormPro onChange={handleChanged}>
             {
                 combo.map(ele=>(
                     <DivElement key={ele.id}>
-                        <InCheck type="checkbox" id={ele.nombre} value={ele.id}></InCheck>
+                        <InCheck type="checkbox" id={ele.nombre} value={ele.id} name={ele.precio} ></InCheck>
                         <ImgType src={ele.imagen}></ImgType>
                         <H6name>{ele.nombre}</H6name>
                         <H6price>+ ${ele.precio} MXN</H6price>
@@ -119,7 +129,7 @@ const Combo =({categoria}) => {
             }
             
             
-        </DivPro>
+        </FormPro>
         
   </DivCombo>);
 }

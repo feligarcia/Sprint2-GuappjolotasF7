@@ -41,30 +41,33 @@ export const H2Count = styled.h2`
 background-color: white;
 `
 
-const Contador = () => {
-  
+const Contador = (props) => {
+  let conteo = props.conteo
   const [counter, setCounter] = useState(1);
-
+  
   const handledSubstract = () => {
     if(counter > 1){
       setCounter(counter - 1)}
+      conteo(counter)
     }
 
-    const handledReset = () => {
-      setCounter(0)
-    }
+    
 
     const handledAdd = () => {
       
       setCounter(counter + 1)
+      conteo(counter) 
     }
+const handleContador =() =>{
+
+}
   
   return(
   <>
-    <DivBtns>
-    <BtnContSub variant="light" onClick={handledSubstract}>.</BtnContSub>
-    <H2Count>{counter}</H2Count>
-    <BtnContAdd variant="light"onClick={handledAdd}>.</BtnContAdd>  
+    <DivBtns onClick={()=> handleContador}>
+      <BtnContSub variant="light" onClick={handledSubstract}>.</BtnContSub>
+      <H2Count>{counter}</H2Count>
+      <BtnContAdd variant="light"onClick={handledAdd}>.</BtnContAdd>  
     </DivBtns>
   </>
   )

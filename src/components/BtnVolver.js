@@ -12,6 +12,7 @@ height: 24px;
 position:fixed;
 left: 24px;
 top: 44px;
+border-radius:12px;
 
 `
  

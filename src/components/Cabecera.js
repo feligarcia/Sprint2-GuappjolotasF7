@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from "../assets/images/logo.png";
 import { Flexrow, Pprodut, Search, SearchInput } from '../styleds/Styles';
 import { Bebidas, Guajolotas, Tamales } from './ListaProductos';
+import BtnCarrito from '../components/BtnCarrito';
 
 export default class Cabecera extends Component {
   constructor(){
@@ -43,8 +44,8 @@ export default class Cabecera extends Component {
             <img className='image'
              src={Logo} alt="Logo" />
             </div>
-
-            <i className="bi bi-cart2"></i>
+            <BtnCarrito />
+            {/* <i className="bi bi-cart2"></i> */}
         </Flexrow>
         <h1>Nada como una guajolotas para empezar el día</h1>
         <Search>

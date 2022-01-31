@@ -4,11 +4,13 @@ export const StyledDivCenter = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: auto;
+
 justify-content: center;
-position: fixed;
-top: 30%; //corregir mejor
-left: 25%; // corregir mejor
+position: absolute;
+top: 30vh; //corregir mejor
+left: 40px;
+margin: 0 auto;
+/* left: 25%; // corregir mejor */
 
 
 `
