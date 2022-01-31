@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Sprint2-GuappjolotasF7/static/css/main.3fad6b65.css",
-    "main.js": "/Sprint2-GuappjolotasF7/static/js/main.63ca1d09.js",
+    "main.js": "/Sprint2-GuappjolotasF7/static/js/main.1c864f10.js",
     "static/media/gp-mole.png": "/Sprint2-GuappjolotasF7/static/media/gp-mole.8afc3cd7fc9c665c98af.png",
     "static/media/logo.png": "/Sprint2-GuappjolotasF7/static/media/logo.8e1605d71fe3a3dffab7.png",
     "static/media/champurrado.png": "/Sprint2-GuappjolotasF7/static/media/champurrado.40c8ddaedb27c036d345.png",
@@ -16,10 +16,10 @@
     "static/media/pina.png": "/Sprint2-GuappjolotasF7/static/media/pina.6ad16aba505c7d455e26.png",
     "index.html": "/Sprint2-GuappjolotasF7/index.html",
     "main.3fad6b65.css.map": "/Sprint2-GuappjolotasF7/static/css/main.3fad6b65.css.map",
-    "main.63ca1d09.js.map": "/Sprint2-GuappjolotasF7/static/js/main.63ca1d09.js.map"
+    "main.1c864f10.js.map": "/Sprint2-GuappjolotasF7/static/js/main.1c864f10.js.map"
   },
   "entrypoints": [
     "static/css/main.3fad6b65.css",
-    "static/js/main.63ca1d09.js"
+    "static/js/main.1c864f10.js"
   ]
 }
