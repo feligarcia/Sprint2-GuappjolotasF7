@@ -33,7 +33,6 @@ const SliderProducto = ({producto}) => {
     const {imagen, nombre, precio} = producto
 
 
-    console.log(FormProductos);
     return(
         <>
         

@@ -29,7 +29,6 @@ export const Guajolotas = ()=>{
             })
     }
     
-    console.log(guajolota);
     return(
         <div className='ListaProductos'>
             {
@@ -70,7 +69,6 @@ export const Bebidas = ()=>{
                 console.log(error);
             })
     }
-    console.log(bebida);
     return(
         <div className='ListaProductos'>
             {
@@ -110,7 +108,6 @@ export const Tamales = ()=>{
                 console.log(error);
             })
     }
-    console.log(tamal);
     return(
         <div className='ListaProductos'>
             {

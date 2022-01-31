@@ -30,7 +30,7 @@ const SaboresPP = ({producto}) =>{
 
   const changeSabor = () =>{
     
-    setProducto()
+    // setProducto()
   }
   return (
   <div>
