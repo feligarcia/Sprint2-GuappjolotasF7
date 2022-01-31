@@ -28,11 +28,15 @@ export const H3Modal = styled.h3`
    margin: 10px;
         `
 
-const SliderProducto = ({producto}) => {
+const SliderProducto = (props) => {
+    let producto = props.producto
+    let num = props.numero
     
     const {imagen, nombre, precio} = producto
-
-
+    let precie =props.precie(precio)
+    console.log(num)
+   
+    
     return(
         <>
         
@@ -40,7 +44,7 @@ const SliderProducto = ({producto}) => {
             <ImgModal src={imagen}></ImgModal>
             <h3>{nombre}</h3>
             <H3Modal>${precio} MXN</H3Modal>
-            <Contador />
+            <Contador conteo={contador => num(contador)}/>
             
                
            </DivCol>

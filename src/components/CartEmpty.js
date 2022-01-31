@@ -11,6 +11,8 @@ width:150px;
 height:150px;
 margin: 0 auto;
 
+
+
 `
 export const StyledH2CarEmp = styled.h2`
 margin: 0 auto;

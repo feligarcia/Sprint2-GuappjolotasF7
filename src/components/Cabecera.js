@@ -5,6 +5,7 @@ import { endpoint } from '../helpers/Url';
 import { Flexrow, Pprodut, Search, SearchInput } from '../styleds/Styles';
 import { FuncionSearch } from './FuncionSearch';
 import { Bebidas, Guajolotas, Tamales } from './ListaProductos';
+import BtnCarrito from '../components/BtnCarrito';
 
 export default class Cabecera extends Component {
   constructor(){
@@ -96,8 +97,8 @@ const filtrado = filterItems(productosearch)
             <img className='image'
              src={Logo} alt="Logo" />
             </div>
-
-            <i className="bi bi-cart2"></i>
+            <BtnCarrito />
+            {/* <i className="bi bi-cart2"></i> */}
         </Flexrow>
         <h1>Nada como una guajolotas para empezar el día</h1>
         <Search>

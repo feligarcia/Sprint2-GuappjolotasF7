@@ -6,6 +6,7 @@ import styled from "styled-components";
 export const Flexrow = styled.div`
     display: flex;
     padding: 3% 5% 2% 0;
+    position:relative;
  
 `
 

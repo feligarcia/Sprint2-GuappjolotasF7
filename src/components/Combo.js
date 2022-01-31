@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import imagenprueba from '../assets/bebidas/champurrado.png'
+import { endpoint } from '../helpers/Url';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export const DivCombo = styled.div`
     display: flex;
@@ -9,7 +12,7 @@ export const DivCombo = styled.div`
  `
 
 
-export const DivPro = styled.div`
+export const FormPro = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 160px;
@@ -44,7 +47,9 @@ export const ImgType = styled.img`
     width: 45%;
     height: 45%;
  `
+export const H2Titulo = styled.h2`
 
+`
 export const H6name = styled.h6`
     background-color: inherit;
  `
@@ -58,33 +63,73 @@ export const H6name = styled.h6`
 `
 
 const Descrip = ({ descripcion }) => <Pdes>{descripcion}</Pdes>
+const TitleLet = ({ descripcion }) => <H2Titulo>{descripcion}</H2Titulo>
 
-function Combo() {
+const Combo =({categoria}) => {
+    const [combo, setCombo] = useState([]);
+    const [carrito, setCarrito] = useState([]);
+    let captiondescrip =''
+    let titulo = ''
+    let cate = ''
+      
+    
+    if(categoria==='bebidas'){
+        titulo = 'Guajolocombo'
+        captiondescrip = 'Selecciona la torta que más te guste y disfruta de tu desayuno.'
+        cate = 'guajolota'
+    } else{
+         titulo = 'Bebidas'
+         captiondescrip = 'Selecciona la bebida que más te guste y disfruta de tu desayuno.'
+         cate = 'bebidas'
+    }
+    const getData = () =>{
+        axios.get(endpoint + `${cate}/`)
+            .then(res =>{
+                setCombo(res.data)
+            })
+            .catch(error =>{
+                console.log(error);
+            })
+    }
+
+
+
+    useEffect(() => {
+        getData()
+       }, []);
+
+       const handleChanged = ({target}) => {
+        if(target.checked ===true)
+        setCarrito({
+            ...carrito,
+                [target.id]: target.name}
+            )
+        console.log(carrito)
+      }
+
   return (
   <DivCombo>
-        <h2>Guajolocombo</h2>
-        <Descrip descripcion="Selecciona la bebida que más te guste y disfruta de tu desayuno.." />
-        <DivPro>
-            <DivElement>
-                <InCheck type="checkbox" id="cbox1" value="first_checkbox"></InCheck>
-                <ImgType src={imagenprueba}></ImgType>
-                <H6name>Champurrado</H6name>
-                <H6price>+ $12 MXN</H6price>
-            </DivElement>
-            <DivElement>
-            <InCheck type="checkbox" id="cbox1" value="first_checkbox"></InCheck>
-                <ImgType src={imagenprueba}></ImgType>
-                <H6name>Champurrado</H6name>
-                <H6price>+ $12 MXN</H6price>
-            </DivElement>
-            <DivElement>
-            <InCheck type="checkbox" id="cbox1" value="first_checkbox"></InCheck>
-                <ImgType src={imagenprueba}></ImgType>
-                <H6name>Champurrado</H6name>
-                <H6price>+ $12 MXN</H6price>
-            </DivElement>
+        <TitleLet descripcion={titulo}></TitleLet>
+        <Descrip descripcion={captiondescrip} />
+        <FormPro onChange={handleChanged}>
+            {
+                combo.map(ele=>(
+                    <DivElement key={ele.id}>
+                        <InCheck type="checkbox" id={ele.nombre} value={ele.id} name={ele.precio} ></InCheck>
+                        <ImgType src={ele.imagen}></ImgType>
+                        <H6name>{ele.nombre}</H6name>
+                        <H6price>+ ${ele.precio} MXN</H6price>
+                    </DivElement>
 
-        </DivPro>
+
+                ))
+                
+
+
+            }
+            
+            
+        </FormPro>
         
   </DivCombo>);
 }

@@ -8,8 +8,8 @@ export const StyledLista = styled.div`
 display:flex;
 flex-direction:column;
 width: 90%;
-height: fit-content;
-position: fixed;
+
+position: absolute;
 top: 56px;
 
 margin-top: 48px;
