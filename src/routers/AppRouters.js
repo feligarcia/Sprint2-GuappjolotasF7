@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Routes, Route, Navigate, BrowserRouter} from 'react-router-dom'
+import { Routes, Route, Navigate, HashRouter} from 'react-router-dom'
 import Principal from '../containers/Principal'
 import Carrito from '../containers/Carrito'
 import Inicio from '../containers/Inicio'
@@ -8,10 +8,11 @@ import Cabecera from '../components/Cabecera'
 import ModalCarrito from '../containers/Modal'
 
 
+
 export default class AppRouter extends Component {
     render() {
         return (
-                 <BrowserRouter>
+                 <HashRouter>
                     
                     <Routes>
                        <Route exact path="/" element={<Inicio/>}/>
@@ -23,7 +24,7 @@ export default class AppRouter extends Component {
                        <Route exact path="/modal" element={<ModalCarrito />}/>
                        <Route exact path="/menu/" element={<Cabecera/>}/>
                    </Routes>
-                </BrowserRouter>
+                </HashRouter>
           
         )
 
