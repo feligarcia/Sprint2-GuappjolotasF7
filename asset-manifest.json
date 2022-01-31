@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fad6b65.css",
-    "main.js": "/static/js/main.ed356f75.js",
-    "static/media/gp-mole.png": "/static/media/gp-mole.8afc3cd7fc9c665c98af.png",
-    "static/media/logo.png": "/static/media/logo.8e1605d71fe3a3dffab7.png",
-    "static/media/champurrado.png": "/static/media/champurrado.40c8ddaedb27c036d345.png",
-    "static/media/arroz_con_leche.png": "/static/media/arroz_con_leche.a50590d39f5d5a1bca36.png",
-    "static/media/chocolate.png": "/static/media/chocolate.2122cf77ed05ff176ae1.png",
-    "static/media/guayaba.png": "/static/media/guayaba.cde0e3e2365d6b48574e.png",
-    "static/media/rajas.png": "/static/media/rajas.5cd3607a4cd49200de92.png",
-    "static/media/pasas.png": "/static/media/pasas.0703942995252e082a65.png",
-    "static/media/verde.png": "/static/media/verde.437ca871a4e51492718b.png",
-    "static/media/mole.png": "/static/media/mole.b46d66a6e041f57cc8a4.png",
-    "static/media/cafe.png": "/static/media/cafe.23d8551b7c5830dd3d5c.png",
-    "static/media/pina.png": "/static/media/pina.6ad16aba505c7d455e26.png",
-    "index.html": "/index.html",
-    "main.3fad6b65.css.map": "/static/css/main.3fad6b65.css.map",
-    "main.ed356f75.js.map": "/static/js/main.ed356f75.js.map"
+    "main.css": "/Sprint2-GuappjolotasF7/static/css/main.3fad6b65.css",
+    "main.js": "/Sprint2-GuappjolotasF7/static/js/main.3972d09c.js",
+    "static/media/gp-mole.png": "/Sprint2-GuappjolotasF7/static/media/gp-mole.8afc3cd7fc9c665c98af.png",
+    "static/media/logo.png": "/Sprint2-GuappjolotasF7/static/media/logo.8e1605d71fe3a3dffab7.png",
+    "static/media/champurrado.png": "/Sprint2-GuappjolotasF7/static/media/champurrado.40c8ddaedb27c036d345.png",
+    "static/media/arroz_con_leche.png": "/Sprint2-GuappjolotasF7/static/media/arroz_con_leche.a50590d39f5d5a1bca36.png",
+    "static/media/chocolate.png": "/Sprint2-GuappjolotasF7/static/media/chocolate.2122cf77ed05ff176ae1.png",
+    "static/media/guayaba.png": "/Sprint2-GuappjolotasF7/static/media/guayaba.cde0e3e2365d6b48574e.png",
+    "static/media/rajas.png": "/Sprint2-GuappjolotasF7/static/media/rajas.5cd3607a4cd49200de92.png",
+    "static/media/pasas.png": "/Sprint2-GuappjolotasF7/static/media/pasas.0703942995252e082a65.png",
+    "static/media/verde.png": "/Sprint2-GuappjolotasF7/static/media/verde.437ca871a4e51492718b.png",
+    "static/media/mole.png": "/Sprint2-GuappjolotasF7/static/media/mole.b46d66a6e041f57cc8a4.png",
+    "static/media/cafe.png": "/Sprint2-GuappjolotasF7/static/media/cafe.23d8551b7c5830dd3d5c.png",
+    "static/media/pina.png": "/Sprint2-GuappjolotasF7/static/media/pina.6ad16aba505c7d455e26.png",
+    "index.html": "/Sprint2-GuappjolotasF7/index.html",
+    "main.3fad6b65.css.map": "/Sprint2-GuappjolotasF7/static/css/main.3fad6b65.css.map",
+    "main.3972d09c.js.map": "/Sprint2-GuappjolotasF7/static/js/main.3972d09c.js.map"
   },
   "entrypoints": [
     "static/css/main.3fad6b65.css",
-    "static/js/main.ed356f75.js"
+    "static/js/main.3972d09c.js"
   ]
 }
