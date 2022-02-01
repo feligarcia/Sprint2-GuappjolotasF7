@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'

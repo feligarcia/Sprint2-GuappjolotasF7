@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'
-import { BtnComprar } from "../styleds/BtnComprar";
 import styled from "styled-components";
-import { FormProductos } from "./FuncionSearch";
+
 
 
 export const DivCol = styled.div`

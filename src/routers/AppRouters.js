@@ -4,7 +4,7 @@ import Principal from '../containers/Principal'
 import Carrito from '../containers/Carrito'
 import Inicio from '../containers/Inicio'
 import Login from '../containers/Login'
-import Cabecera from '../components/Cabecera'
+import Cabecera from '../containers/Cabecera'
 import ModalCarrito from '../containers/Modal'
 
 

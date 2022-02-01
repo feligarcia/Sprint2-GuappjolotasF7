@@ -19,11 +19,19 @@ export const Search = styled.div`
     margin:auto;
     display:flex;
     gap:2%;
+    
+    
 `
 export const SearchInput = styled.input`
     width:100%;
     border:none;
     background-color: #e7e7e7;
+    &:focus {
+        border-style:none none solid none;
+        border-color: #F7D58D;
+        
+    }
+    
 `
 
 export const Pprodut = styled.p`

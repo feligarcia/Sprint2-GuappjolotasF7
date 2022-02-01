@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Logo from "../assets/images/logo.png";
 import styled from 'styled-components';
-import { Link, Router, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { keyframes } from 'styled-components'
 
 
@@ -35,19 +35,17 @@ function Inicio() {
     const navigate = useNavigate()
 
     const handleAutoLoad =()=>{
-        function IraLogin(){ navigate("/menu")}
-        const espera =setTimeout(IraLogin, 2000);
+      const leerUser = localStorage.getItem('Userguajalota')
+       function IraLogin(){
+       if(leerUser){navigate("/menu")} else {navigate('/login')}}
+       setTimeout(IraLogin, 2000)
     }
-    useEffect(() => {
-        handleAutoLoad()
-    }, []);
     
+    handleAutoLoad()
   return (
   <DivInicio>
     <ImgInicio src={Logo}/>
-    {/* <Router>
-        <Link className="link" to="/">Inicio</Link>
-    </Router> */}
+    
     
     
   </DivInicio>

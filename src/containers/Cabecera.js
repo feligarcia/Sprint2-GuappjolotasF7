@@ -1,14 +1,13 @@
-import axios from 'axios';
 import React, { Component } from 'react';
 import Logo from "../assets/images/logo.png";
 import { endpoint } from '../helpers/Url';
 import { Flexrow, Pprodut, Search, SearchInput } from '../styleds/Styles';
-import { FuncionSearch } from './FuncionSearch';
-import { Bebidas, Guajolotas, Tamales } from './ListaProductos';
+
+import { Bebidas, Guajolotas, Tamales } from '../components/ListaProductos';
 import BtnCarrito from '../components/BtnCarrito';
-import { useNavigate } from 'react-router-dom';
 
 export default class Cabecera extends Component {
+ 
   constructor(){
     super()
     this.state ={
@@ -86,6 +85,7 @@ export default class Cabecera extends Component {
   }
   
   render() {
+    
     const  handleinputChange = ({target}) =>{
       this.setState({
           
@@ -98,12 +98,13 @@ export default class Cabecera extends Component {
   const productosearch = this.state.producto
   const porductoUnidad = this.state.productos
           function filterItems(query) {
-  return porductoUnidad.filter(function(el) {
-      return el.nombre.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
-}
+            return porductoUnidad.filter(function(el) {
+                return el.nombre.toLowerCase().indexOf(query.toLowerCase()) > -1;
+            })
+          }
+
 const filtrado = filterItems(productosearch)
-    console.log(productosearch);
+    
     console.log(filtrado);
     return (<div className='cabecera'>
         <Flexrow className='iconosCabecera'>
@@ -113,13 +114,13 @@ const filtrado = filterItems(productosearch)
              src={Logo} alt="Logo" />
             </div>
             <BtnCarrito />
-            {/* <i className="bi bi-cart2"></i> */}
+            
         </Flexrow>
         <h1>Nada como una guajolotas para empezar el día</h1>
         <Search>
             <i className="bi bi-search"></i>
             <SearchInput className='input' type="text" value={this.state.producto} onChange={handleinputChange } onFocus={this.changed} name='producto'
-             placeholder='Sabor de guajolota, bebida...' />
+             placeholder='Sabor de guajolota, bebida...' autocomplete="off" />
         </Search>
         <Flexrow className='iconosCabecera'>
             <Pprodut className={'Pproduct'} onClick={this.guajolotas}>Guajolotas</Pprodut>
@@ -132,7 +133,7 @@ const filtrado = filterItems(productosearch)
       
      {this.state.change && <div>
         {filtrado.map(ele=>(
-          <div className='ListaProductos '>
+          <div key={ele.id} className='ListaProductos '>
           <Flexrow className='itemListado ' key={ele.id} > 
               <div className='contenedorImagen'>
                   <img src={ele.imagen} alt={ele.nombre} />

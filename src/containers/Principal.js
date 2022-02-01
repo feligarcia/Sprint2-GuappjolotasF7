@@ -5,7 +5,7 @@ import BtnCarrito from '../components/BtnCarrito';
 import SaboresPP from '../components/SaboresPP';
 import Combo from '../components/Combo';
 import { BtnComprar } from '../styleds/BtnComprar';
-import { Params, useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { endpoint } from '../helpers/Url';
 import axios from 'axios';
 import { useEffect } from 'react';

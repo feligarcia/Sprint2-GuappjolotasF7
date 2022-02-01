@@ -1,15 +1,15 @@
-import React, { useEffect, useState, createContext  } from 'react';
+import React, { useEffect, useState  } from 'react';
 import axios from 'axios';
 import { endpoint } from '../helpers/Url';
 import { Flexrow } from '../styleds/Styles';
-import Principal from '../containers/Principal';
+
 import { useNavigate } from 'react-router-dom';
 
 
-const SetLocal = (e)=>{
-        const id = e.target.id
-        console.log(id);
-    }
+// const SetLocal = (e)=>{
+//         const id = e.target.id
+//         console.log(id);
+//     }
 export const Guajolotas = ()=>{
     const navigate = useNavigate()
    

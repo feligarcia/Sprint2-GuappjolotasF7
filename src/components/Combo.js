@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import imagenprueba from '../assets/bebidas/champurrado.png'
 import { endpoint } from '../helpers/Url';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 export const DivCombo = styled.div`
@@ -94,9 +93,8 @@ const Combo =({categoria}) => {
 
 
 
-    useEffect(() => {
+    
         getData()
-       }, []);
 
        const handleChanged = ({target}) => {
         if(target.checked ===true)

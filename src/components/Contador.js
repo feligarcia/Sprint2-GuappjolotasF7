@@ -1,9 +1,7 @@
-import { Button } from 'react-bootstrap';
 import React, {useState} from 'react';
 import imgAdd from '../assets/images/plus.png'
 import imgSub from '../assets/images/minus.png'
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-bootstrap';
 
 export const DivBtns = styled.div`
 display:flex;

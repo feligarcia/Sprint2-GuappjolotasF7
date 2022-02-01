@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react"
 import React from "react"
 import styled from "styled-components"
 import imgvolver from '../assets/images/volver.png';
