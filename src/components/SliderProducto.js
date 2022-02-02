@@ -29,10 +29,13 @@ export const H3Modal = styled.h3`
 const SliderProducto = (props) => {
     let producto = props.producto
     let num = props.numero
+    // let canasta = props.canasta
+    let anaCarrito = props.anaCarrito
     
     const {imagen, nombre, precio} = producto
-    let precie =props.precie(precio)
-    console.log(num)
+    // anaCarrito({...producto,
+    //     [nombre]:precio}
+    //     )
    
     
     return(

@@ -1,5 +1,4 @@
 import React from "react";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'
@@ -27,7 +26,7 @@ export const H3Modal = styled.h3`
         `
 
 const ModalCarrito = () => {
-    const navigate =useNavigate()
+    const navigate = useNavigate()
 
 
     return(

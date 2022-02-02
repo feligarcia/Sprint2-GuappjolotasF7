@@ -125,7 +125,7 @@ const leerUsuario = async (ingreso) => {
   .then(response => {
     const existeRegistro = response.data.some(ele=> (ele.email === ingreso.email) && (ele.password === ingreso.password))
      if(existeRegistro){
-             const localsesion = localStorage.setItem('Userguajalota',JSON.stringify(ingreso.email))
+             localStorage.setItem('Userguajalota',JSON.stringify(ingreso.email))
        navigate('/menu')
     }else{setAlerta('email o contraseña invalidos')}
      

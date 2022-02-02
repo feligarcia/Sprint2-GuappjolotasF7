@@ -9,8 +9,6 @@ export const DivCombo = styled.div`
     flex-direction:column;
     padding: 0 24px;
  `
-
-
 export const FormPro = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -64,14 +62,14 @@ export const H6name = styled.h6`
 const Descrip = ({ descripcion }) => <Pdes>{descripcion}</Pdes>
 const TitleLet = ({ descripcion }) => <H2Titulo>{descripcion}</H2Titulo>
 
-const Combo =({categoria}) => {
+const Combo =({categoria, canasta, anaCarrito}) => {
     const [combo, setCombo] = useState([]);
-    const [carrito, setCarrito] = useState([]);
+    // const [carrito, setCarrito] = useState({});
+    
+    
     let captiondescrip =''
     let titulo = ''
     let cate = ''
-      
-    
     if(categoria==='bebidas'){
         titulo = 'Guajolocombo'
         captiondescrip = 'Selecciona la torta que más te guste y disfruta de tu desayuno.'
@@ -90,26 +88,28 @@ const Combo =({categoria}) => {
                 console.log(error);
             })
     }
+getData()
 
 
 
-    
-        getData()
+const handleSubmit = (e) =>{
+e.preventDefault()
+}
 
        const handleChanged = ({target}) => {
         if(target.checked ===true)
-        setCarrito({
-            ...carrito,
+        anaCarrito({
+            ...canasta,
                 [target.id]: target.name}
             )
-        console.log(carrito)
+        // console.log(canasta)
       }
 
   return (
   <DivCombo>
         <TitleLet descripcion={titulo}></TitleLet>
         <Descrip descripcion={captiondescrip} />
-        <FormPro onChange={handleChanged}>
+        <FormPro onChange={handleChanged} id="comboscheck" onSubmit={handleSubmit}>
             {
                 combo.map(ele=>(
                     <DivElement key={ele.id}>
