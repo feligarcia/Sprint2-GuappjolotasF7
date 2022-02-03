@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import imagenprueba from '../assets/guajolotas/gp-mole.png'
+import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -16,11 +17,14 @@ margin-top: 48px;
 margin-left:20px;
 margin-right: 20px;
 justify-content: space-evenly;
-align-items: center; //pendiente centrar div horizontalmente
+align-items: center; 
 `
 export const Styleddescripcion = styled.div`
 display: flex;
 flex-direction: column;
+font-size: 1rem;
+align-items: flex-start;
+justify-content:center;
 `
 
 export const StyledLi = styled.li`
@@ -38,7 +42,7 @@ export const StyledimgListCarr = styled.img`
 width: 56px;
 height: 56px;
 `
-export const StyledPrecio = styled.h2`
+export const StyledPrecio = styled.h5`
 color: #FA4A0C;
 `
 export const StyledTotal = styled.div`
@@ -63,25 +67,35 @@ color: #FA4A0C;
 
 
 function ListCarrito() {
+  const navigate = useNavigate()
+  
+  let getlocalstorage = JSON.parse(localStorage.getItem('Carrito'))
+ 
+const handleModal=()=>{
+
+  
+  navigate('/modal')
+}
+
   return (
     <>
   <StyledLista>
-    <StyledLi>
-      <StyledimgListCarr src={imagenprueba}></StyledimgListCarr>
-      <Styleddescripcion>
-        <h3>Guajolota Verde</h3>
-        <h4>x2</h4>
-      </Styleddescripcion>
-      <StyledPrecio>$12 MXN</StyledPrecio>
+    {
+      getlocalstorage.map(ele=>(
+        <StyledLi key={ele.id} onClick={handleModal}>
+          <StyledimgListCarr src={ele.imagen}></StyledimgListCarr>
+          <Styleddescripcion>
+            <h6>{ele.nombre}</h6>
+            <h6>x{ele.cantidad}</h6>
+          </Styleddescripcion>
+          <StyledPrecio>${ele.precio * ele.cantidad} MXN</StyledPrecio>
     </StyledLi> 
-          <StyledLi>
-            <StyledimgListCarr src={imagenprueba}></StyledimgListCarr>
-            <Styleddescripcion>
-              <h3>Guajolota Verde</h3>
-              <h4>x2</h4>
-            </Styleddescripcion>
-            <StyledPrecio>$12 MXN</StyledPrecio>
-          </StyledLi> 
+       
+
+
+      ))
+    }
+    
 
           <StyledTotal>
               <StyledTotalh3>Total</StyledTotalh3>

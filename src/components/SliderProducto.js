@@ -1,5 +1,4 @@
 import React from "react";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contador from '../components/Contador.js'
 import styled from "styled-components";
@@ -29,14 +28,10 @@ export const H3Modal = styled.h3`
 const SliderProducto = (props) => {
     let producto = props.producto
     let num = props.numero
-    // let canasta = props.canasta
-    let anaCarrito = props.anaCarrito
+   
     
     const {imagen, nombre, precio} = producto
-    // anaCarrito({...producto,
-    //     [nombre]:precio}
-    //     )
-   
+    
     
     return(
         <>

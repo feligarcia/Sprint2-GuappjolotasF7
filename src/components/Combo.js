@@ -64,7 +64,6 @@ const TitleLet = ({ descripcion }) => <H2Titulo>{descripcion}</H2Titulo>
 
 const Combo =({categoria, canasta, anaCarrito}) => {
     const [combo, setCombo] = useState([]);
-    // const [carrito, setCarrito] = useState({});
     
     
     let captiondescrip =''
@@ -97,12 +96,16 @@ e.preventDefault()
 }
 
        const handleChanged = ({target}) => {
-        if(target.checked ===true)
-        anaCarrito({
-            ...canasta,
-                [target.id]: target.name}
-            )
-        // console.log(canasta)
+           anaCarrito([
+            ...canasta,   
+            {          
+                id:Number(target.value),
+                nombre:target.id,
+                imagen:target.title,
+                precio: Number(target.name),
+                cantidad: 1            
+           }])
+     
       }
 
   return (
@@ -113,7 +116,7 @@ e.preventDefault()
             {
                 combo.map(ele=>(
                     <DivElement key={ele.id}>
-                        <InCheck type="checkbox" id={ele.nombre} value={ele.id} name={ele.precio} ></InCheck>
+                        <InCheck type="checkbox" id={ele.nombre} value={ele.id} name={ele.precio} title={ele.imagen}></InCheck>
                         <ImgType src={ele.imagen}></ImgType>
                         <H6name>{ele.nombre}</H6name>
                         <H6price>+ ${ele.precio} MXN</H6price>
