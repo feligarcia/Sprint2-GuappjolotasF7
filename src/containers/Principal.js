@@ -36,7 +36,7 @@ const Principal = () => {
         })
 }
 useEffect( () => {
-  getData()
+  getData(endpoint)
    
 }, []);
 
