@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback, memo} from 'react';
 import SliderProducto from '../components/SliderProducto';
 import BtnVolver from '../components/BtnVolver'
 import BtnCarrito from '../components/BtnCarrito';
@@ -24,7 +24,7 @@ const Principal = () => {
 
   // console.log(params)
 
-  const getData = () =>{
+  const getData = useCallback(() =>{
     axios.get(endpoint + `${categoria}/${id}`)
         .then(res =>{
             setProducto(res.data)              
@@ -33,7 +33,8 @@ const Principal = () => {
               nombre:res.data.nombre,
               imagen:res.data.imagen,
               precio: res.data.precio,
-              cantidad: contador
+              cantidad: contador,
+              categoria: categoria
             }])
             
             console.log('colombia perdedor')            
@@ -41,9 +42,12 @@ const Principal = () => {
         .catch(error =>{
             console.log(error);
         })
-}
+})
+let suma = 0
+suma = carrito.map(ele=>ele.precio*ele.cantidad)
 useEffect( () => {
   getData(endpoint)
+  
    
 }, []);
 
@@ -52,10 +56,11 @@ let conta = carrito.length + contador
 
 //configurando funcion que me sume todo lo que hay en el carrito en campo cantidad
 // let reducer = (previousValue, currentValue) => previousValue + currentValue;
-let suma = 0
+
+
 // if(carrito.length > 0){
 // let suma = carrito.reduce(reducer)}
-console.log(suma)
+// console.log(suma)
 
 const agregarLocal = () =>{
   miralo[0].cantidad = contador
@@ -80,7 +85,7 @@ const agregarLocal = () =>{
         <Combo categoria={categoria} canasta={carrito} anaCarrito={setCarrito}/>
         <BtnComprar type="submit" form="comboscheck" onClick={()=> {agregarLocal() ; 
           navigate("/carrito")
-          }}> Agregar {conta} al carrito ${suma}</BtnComprar>
+          }}> Agregar {conta} al carrito ${conta}</BtnComprar>
 
 
 

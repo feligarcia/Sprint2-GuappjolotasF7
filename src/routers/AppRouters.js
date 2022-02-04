@@ -21,7 +21,7 @@ export default class AppRouter extends Component {
                        <Route exact path="*" element={<Navigate replace to="/" />}/>
                        <Route exact path="/login" element={<Login />}/>
                        <Route exact path="/carrito" element={<Carrito />}/>
-                       <Route exact path="/modal" element={<ModalCarrito />}/>
+                       <Route exact path="/modal/:categoria/:id" element={<ModalCarrito />}/>
                        <Route exact path="/menu/" element={<Cabecera/>}/>
                    </Routes>
                 </HashRouter>

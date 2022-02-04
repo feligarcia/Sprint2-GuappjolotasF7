@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import { endpoint } from '../helpers/Url';
 import { useState } from 'react';
@@ -62,7 +62,7 @@ export const H6name = styled.h6`
 const Descrip = ({ descripcion }) => <Pdes>{descripcion}</Pdes>
 const TitleLet = ({ descripcion }) => <H2Titulo>{descripcion}</H2Titulo>
 
-const Combo =({categoria, canasta, anaCarrito}) => {
+const Combo = ({categoria, canasta, anaCarrito}) => {
     const [combo, setCombo] = useState([]);
     
     
@@ -78,7 +78,7 @@ const Combo =({categoria, canasta, anaCarrito}) => {
          captiondescrip = 'Selecciona la bebida que más te guste y disfruta de tu desayuno.'
          cate = 'bebidas'
     }
-    const getData = () =>{
+    const getData = useCallback(() =>{
         axios.get(endpoint + `${cate}/`)
             .then(res =>{
                 setCombo(res.data)
@@ -86,13 +86,15 @@ const Combo =({categoria, canasta, anaCarrito}) => {
             .catch(error =>{
                 console.log(error);
             })
-    }
+    })
 getData()
 
-
+let contrario = ''
+contrario = categoria === 'bebidas' ? contrario = 'guajolota' : contrario = 'bebidas'
 
 const handleSubmit = (e) =>{
 e.preventDefault()
+console.log(e)
 }
 
        const handleChanged = ({target}) => {
@@ -103,10 +105,12 @@ e.preventDefault()
                 nombre:target.id,
                 imagen:target.title,
                 precio: Number(target.name),
-                cantidad: 1            
+                cantidad: 1,
+                categoria: contrario          
            }])
      
       }
+      
 
   return (
   <DivCombo>

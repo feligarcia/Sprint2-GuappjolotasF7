@@ -19,8 +19,8 @@ export const Guajolotas = ()=>{
         getData()
     },[])
 
-    const getData = () =>{
-        axios.get(endpoint +"guajolota")
+    const getData = async () =>{
+        await axios.get(endpoint +"guajolota")
             .then(res =>{
                 setGuajolota(res.data)
             })

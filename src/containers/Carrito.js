@@ -20,11 +20,15 @@ left: 50%;
 
 `
 export const DivBtn = styled.div`
-position: absolute;
-top:90vh;
+position: fixed;
+bottom:10px;
+
 `
 export const DivContenedor = styled.div`
+display: flex;
+flex-direction:column;
 position: relative;
+align-items: center;
 
 `
 export const H2Btn = styled.h2`

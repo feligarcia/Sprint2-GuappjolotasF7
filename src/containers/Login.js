@@ -112,6 +112,8 @@ const crearUsuario = (usuarios) => {
   axios.post(urlusers, usuarios)
   .then(response => {
       console.log('Usuario creado')
+      navigate('/login')
+      console.log('No pasa de aqui?')
       
   })
  .catch(error => {

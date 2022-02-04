@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import Logo from "../assets/images/logo.png";
 import { endpoint } from '../helpers/Url';
 import { Flexrow, Pprodut, Search, SearchInput } from '../styleds/Styles';
+import { useNavigate  } from 'react-router-dom';
 
 import { Bebidas, Guajolotas, Tamales } from '../components/ListaProductos';
 import BtnCarrito from '../components/BtnCarrito';
 
 export default class Cabecera extends Component {
+ 
  
   constructor(){
     super()
@@ -19,17 +21,9 @@ export default class Cabecera extends Component {
       productos:[]
     };
    }
-    // axios.get(endpoint+"todos")
-    //   .then(res=>{
-       
-    //   })
-    //   .catch(error =>{
-    //     console.log(error);
-    //   })
-    //   }
-    // console.log(this.state.productos);
-     componentDidMount() {
-      fetch(endpoint+"todos")
+  
+     async componentDidMount() {
+      await fetch(endpoint+"todos")
         .then((res)=> res.json())
         .then((json)=>{
           json.map((el)=>{
@@ -94,7 +88,7 @@ export default class Cabecera extends Component {
       
   }
   
-   console.log(this.state.productos);
+  //  console.log(this.state.productos);
   const productosearch = this.state.producto
   const porductoUnidad = this.state.productos
           function filterItems(query) {
@@ -105,7 +99,7 @@ export default class Cabecera extends Component {
 
 const filtrado = filterItems(productosearch)
     
-    console.log(filtrado);
+    // console.log(filtrado);
     return (<div className='cabecera'>
         <Flexrow className='iconosCabecera'>
 
@@ -134,7 +128,7 @@ const filtrado = filterItems(productosearch)
      {this.state.change && <div>
         {filtrado.map(ele=>(
           <div key={ele.id} className='ListaProductos '>
-          <Flexrow className='itemListado ' key={ele.id} > 
+          <Flexrow className='itemListado ' key={ele.id} onClick={() => useNavigate(`/principal/${ele.categoria}/${ele.id}`)} > 
               <div className='contenedorImagen'>
                   <img src={ele.imagen} alt={ele.nombre} />
               </div>

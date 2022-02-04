@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imagenprueba from '../assets/guajolotas/gp-mole.png'
 import Contador from '../components/Contador.js'
 import { BtnComprar } from "../styleds/BtnComprar";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from 'react-router-dom';
 
 
 export const DivCol = styled.div`
@@ -26,23 +26,32 @@ export const H3Modal = styled.h3`
         `
 
 const ModalCarrito = () => {
+    
     const navigate = useNavigate()
-
-
+    let getlocalstorage = JSON.parse(localStorage.getItem('Carrito'))
+    const params = useParams()
+    const {categoria, id} = params
+    let itemSelect = getlocalstorage.find(ele=>ele.id==id)
+    const [counter, conteo] = useState(itemSelect.cantidad);
+    const findInd = getlocalstorage.findIndex(ele=>ele.id==id)
+    const handleActualize =()=>{
+       getlocalstorage[findInd].cantidad = counter
+       localStorage.setItem('Carrito', JSON.stringify(getlocalstorage))
+    }
     return(
         <>
-        {/* <Container fluid className="m-0 justify-content-center align-items-center"> */}
+        
            <DivCol>
-            <ImgModal src={imagenprueba}></ImgModal>
-            <h3>Guajolota de Tamal Verde</h3>
-            <H3Modal>$50 MXN</H3Modal>
-            <Contador />
-            <h3><BtnComprar onClick={()=>navigate("/carrito")}>Actualizar</BtnComprar></h3>
+               
+                <ImgModal src={itemSelect.imagen}></ImgModal>
+                <h3>{itemSelect.nombre}</h3>
+                <H3Modal>${itemSelect.precio*counter} MXN</H3Modal>
+                <Contador conteo={conteo}/>
+                <h3><BtnComprar onClick={()=>{handleActualize();navigate("/carrito")}}>Actualizar</BtnComprar></h3>
                 <H3Modal onClick={()=>navigate("/carrito")}>Cerrar</H3Modal>
            </DivCol>
 
 
-        {/* </Container> */}
 
         
         </>
