@@ -31,7 +31,8 @@ export default class Cabecera extends Component {
               id: el.id,
               nombre:el.nombre,
               precio:el.precio,
-              imagen:el.imagen
+              imagen:el.imagen,
+              categoria:el.categoria
             }
             let productos = [...this.state.productos,todosproductos];
             this.setState({productos})
@@ -99,7 +100,7 @@ export default class Cabecera extends Component {
 
 const filtrado = filterItems(productosearch)
     
-    // console.log(filtrado);
+    // console.log(filtrado[0].categoria);
     return (<div className='cabecera'>
         <Flexrow className='iconosCabecera'>
 
