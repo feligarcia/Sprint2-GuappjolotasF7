@@ -1,9 +1,10 @@
+
+const env = require('react-dotenv')
+
 const express = require("express");
 const app = express();
-// This is a public sample test API key.
-// Don’t submit any personally identifiable information in requests made with this key.
-// Sign in to see your own test API key embedded in code samples.
-const stripe = require("stripe")('sk_test_CGGvfNiIPwLXiDwaOfZ3oX6Y');
+
+const stripe = require("stripe")(env.SECRET_KEY);
 
 app.use(express.static("public"));
 app.use(express.json());

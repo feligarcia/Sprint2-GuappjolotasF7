@@ -24,7 +24,7 @@ export default class AppRouter extends Component {
                        <Route exact path="/carrito" element={<Carrito />}/>
                        <Route exact path="/modal/:categoria/:id" element={<ModalCarrito />}/>
                        <Route exact path="/menu/" element={<Cabecera/>}/>
-                       {/* <Route exact path='/pagos' element={<Pagos/>} /> */}
+                       <Route exact path='/pagos' element={<Pagos/>} />
                    </Routes>
                 </HashRouter>
           
